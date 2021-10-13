@@ -10,6 +10,8 @@ const Todo = function (task) {
   };
 };
 
+exports.Todo = Todo;
+
 describe('constructor pattern', () => {
   it('should create instance of Todo Class', done => {
     const todo = new Todo();
