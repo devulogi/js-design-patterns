@@ -24,7 +24,7 @@ const Singleton = function () {
           });
           return this;
         default:
-          throw 'No params provided.';
+          throw new TypeError('No params provided.');
       }
     },
     getUrgentTasks: function () {
