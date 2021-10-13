@@ -2,12 +2,9 @@
 
 const { expect } = require('chai');
 
-const Todo = function (task) {
+const Todo = function (task, completed = false) {
   this.task = task;
-  this.completed = false;
-  this.updateTaskStatus = function () {
-    this.completed = !this.completed;
-  };
+  this.completed = completed;
 };
 
 exports.Todo = Todo;
@@ -21,7 +18,7 @@ describe('constructor pattern', () => {
 
   it('should update status of todo object', done => {
     const todo = new Todo();
-    todo.updateTaskStatus();
+    todo.completed = true;
     expect(todo.completed).to.be.true;
     done();
   });
