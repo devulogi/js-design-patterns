@@ -5,13 +5,13 @@ const Factory = function (type, task) {
   switch (type) {
     case 'urgent':
       return {
-        type: 'Urgent',
+        type: 'urgent',
         task: new Todo(task),
         createdAt: new Date().getTime(),
       };
     case 'not important':
       return {
-        type: 'Not important',
+        type: 'not_important',
         task: new Todo(task),
         createdAt: new Date().getTime(),
       };
