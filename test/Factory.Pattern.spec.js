@@ -25,7 +25,7 @@ exports.Factory = Factory;
 
 describe('Factory', () => {
   it('should create urgent task', done => {
-    const todo = new Factory('urgent', 'fix bugs');
+    const todo = Factory('urgent', 'fix bugs');
     expect(todo.type).to.equal('Urgent');
     done();
   });
