@@ -9,7 +9,7 @@ const Factory = function (type, task) {
         task: new Todo(task),
         createdAt: new Date().getTime(),
       };
-    case 'not important':
+    case 'not_important':
       return {
         type: 'not_important',
         task: new Todo(task),
@@ -23,7 +23,7 @@ const Factory = function (type, task) {
 
 exports.Factory = Factory;
 
-describe('Factory', () => {
+describe('factory pattern', () => {
   it('should create urgent task', done => {
     const todo = Factory('urgent', 'fix bugs');
     expect(todo.type).to.equal('urgent');
