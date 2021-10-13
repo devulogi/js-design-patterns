@@ -21,6 +21,8 @@ const Factory = function (type, task) {
   }
 };
 
+exports.Factory = Factory;
+
 describe('Factory', () => {
   it('should create urgent task', done => {
     const todo = new Factory('urgent', 'fix bugs');
